@@ -26,6 +26,5 @@ class Algorithm
         virtual void select(int) = 0;
         virtual void save(string) = 0;
         virtual void configure() = 0;
-		virtual void setSearch(int, int) = 0;
 };
 #endif
