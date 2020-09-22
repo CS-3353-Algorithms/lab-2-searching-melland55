@@ -19,7 +19,7 @@ class Algorithm
         };
     	
     	//Defines each function that will be overloaded in the Search class
-        virtual void load(string, string, string) = 0;
+        virtual void load(Graph) = 0;
         virtual void execute() = 0;
         virtual void display() = 0;
         virtual void stats(string) = 0;

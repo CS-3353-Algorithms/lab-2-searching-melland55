@@ -17,7 +17,7 @@ Search::~Search(){
 
 }
 
-void Search::load(string graph, string positions, string weights){
+void Search::load(Graph graph){
 	
 }
 
@@ -57,7 +57,7 @@ void Search::select(int searchAlgo){
 	}
 }
 
-void Search::save(string filePath){
+void Search::save(string fileName){
 	
 }
 

@@ -2,6 +2,7 @@
 #define SEARCH_H
 
 #include "Algorithm.h"
+#include "Graph.h"
 #include <string>
 #include <vector>
 using namespace std;
@@ -12,7 +13,7 @@ class Search : public Algorithm
         Search();
         Search(int, int);
         ~Search();
-        void load(string, string, string);
+        void load(Graph);
         void execute();
         void display();
         void stats(string);
