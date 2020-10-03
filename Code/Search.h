@@ -2,7 +2,6 @@
 #define SEARCH_H
 
 #include "Algorithm.h"
-#include "Graph.h"
 #include <string>
 #include <vector>
 using namespace std;

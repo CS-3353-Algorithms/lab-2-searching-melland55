@@ -1,6 +1,7 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
 
+#include "Graph.h"
 #include <string>
 using namespace std;
 
