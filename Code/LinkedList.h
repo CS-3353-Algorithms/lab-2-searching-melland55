@@ -34,6 +34,7 @@ public:
 	void display();
     LinkedList<T>& operator=(const LinkedList<T>&);
     bool operator==(const LinkedList<T>&);
+    int& operator[](const int);
 	Node<T>* head;
     Node<T>* tail;
 private:

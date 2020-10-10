@@ -40,6 +40,9 @@
         "ratio": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "queue": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
     }
 }

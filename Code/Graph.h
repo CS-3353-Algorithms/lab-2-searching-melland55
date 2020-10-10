@@ -12,12 +12,13 @@ class Graph
     public:
         Graph(string, string, string);
         ~Graph();
-        LinkedList<LinkedList<int>>* getAdjacencyList();
+        LinkedList<int>* getAdjacencyList();
+        bool** getAdjacencyMatrix();
         vector<vector<int>>* getPositions();
         vector<vector<double>>* getWeights();
     private:
         bool** adjacencyMatrix;
-		LinkedList<LinkedList<int>>* adjacencyList;
+		LinkedList<int>* adjacencyList;
         vector<vector<int>>* positions;
         vector<vector<double>>* weights;
 };

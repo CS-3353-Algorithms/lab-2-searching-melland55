@@ -1,7 +1,6 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
 
-#include "Graph.h"
 #include <string>
 using namespace std;
 
@@ -20,12 +19,12 @@ class Algorithm
         };
     	
     	//Defines each function that will be overloaded in the Search class
-        virtual void load(Graph) = 0;
+        virtual void load(string, string, string) = 0;
         virtual void execute() = 0;
         virtual void display() = 0;
-        virtual void stats(string) = 0;
+        virtual void stats() = 0;
         virtual void select(int) = 0;
         virtual void save(string) = 0;
-        virtual void configure() = 0;
+        virtual void configure(int, int) = 0;
 };
 #endif

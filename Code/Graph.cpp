@@ -38,22 +38,23 @@ Graph::Graph(string graphFile, string positionFile, string weightFile){
 	}
 	ifs.close();
 	ifs.open(graphFile);
-    adjacencyList = new LinkedList<LinkedList<int>>();
+    adjacencyList = new LinkedList<int>[positions->size()];
     adjacencyMatrix = new bool*[positions->size()];
     for(int i = 0; i < positions->size(); i++){
         adjacencyMatrix[i] = new bool[positions->size()]{0};
     }
 	//Loops through file and adds all rows and colums to both the adjacency matrix and adjacency list
+    int counter = 0;
 	while(!(ifs.eof())){
         LinkedList<int> list;
         string temp;
 		string line;
 		ifs >> line;
         stringstream ss(line);
-        bool dec = true;
         int origin;
+        bool dec = true;
         while(getline(ss, temp, ',')){
-            list.append(stoi(temp));
+            adjacencyList[counter].append(stoi(temp));
             if(dec){
                 dec = false;
                 origin = stoi(temp);
@@ -61,15 +62,8 @@ Graph::Graph(string graphFile, string positionFile, string weightFile){
                 adjacencyMatrix[origin - 1][stoi(temp) - 1] = true;
             }
         }
-        adjacencyList->append(list);
+        counter++;
 	}
-	ifs.close();
-    for(int i = 0; i < positions->size(); i++){
-        for(int j = 0; j < positions->size(); j++){
-            cout << adjacencyMatrix[i][j] << " ";
-        }
-        cout << endl;
-    }
 }
 
 Graph::~Graph(){
@@ -78,8 +72,12 @@ Graph::~Graph(){
 }
 
 
-LinkedList<LinkedList<int>>* Graph::getAdjacencyList(){
+LinkedList<int>* Graph::getAdjacencyList(){
     return adjacencyList;
+}
+
+bool** Graph::getAdjacencyMatrix(){
+    return adjacencyMatrix;
 }
 
 vector<vector<int>>* Graph::getPositions(){
